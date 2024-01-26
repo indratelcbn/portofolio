@@ -2,7 +2,7 @@
     <section class="jumbotron text-center">
         
         <img src="/img/foto.png" alt="Indra Budi Darma" width="200" class="rounded-circle img-thumbnail"></img>
-        <h1 id="section">Indra Budi Darma</h1>
+        <h1 id="section">{{namaDepan}} {{ namaBelakang }}</h1>
         <p class="lead">VueJS Programmer</p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#ffffff" fill-opacity="1"
@@ -11,4 +11,34 @@
         </svg>
 
     </section>
+    <input v-on:input="ubahNamaDepan" v-bind:value="inputValueNamaDepan" placeholder="nama depan" />
+    <input v-on:input="ubahNamaBelakang" v-bind:value="inputValueNamaBelakang"placeholder="nama belakang" />
+    <button v-on:click="klikSubmit">Submit</button>
+    
 </template>
+
+<script>
+export default{
+    data() {
+        return{
+          namaDepan: "Badenk",
+        namaBelakang: "Darma",
+        inputValueNamaDepan:"",
+        inputValueNamaBelakang: ""
+        }
+    },
+    methods: {
+        ubahNamaDepan(event) {
+          this.inputValueNamaDepan = event.target.value
+        //console.log(event.target.value)  
+        },
+        ubahNamaBelakang(event) {
+          this.inputValueNamaBelakang = event.target.value
+        },
+        klikSubmit(event) {
+            this.namaDepan = this.inputValueNamaDepan
+            this.namaBelakang = this.inputValueNamaBelakang
+        }
+ }
+}
+</script>

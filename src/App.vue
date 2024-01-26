@@ -1,24 +1,18 @@
 <script setup>
-  import { RouterLink, RouterView } from 'vue-router'
-  import navbar from "./components/navbar.vue"
-  import Jumbotron from "./components/jumbotron.vue"
-  import about from "./components/about.vue"
-  import projects from './components/projects.vue'
-  import contact from './components/contact.vue'
-  import footers from './components/footers.vue'
+import navbar from './components/navbar.vue'
+import about from './components/about.vue'
+import jumbotron from './components/jumbotron.vue'
+import HomePage from './views/HomePage.vue';
 </script>
 
 
-
 <template>
+  <navbar />
+  <home-page />
+  <about />
+  <jumbotron />
 
-  <navbar/>
-  <jumbotron/>
-  <about/>
-  <projects/>
-  <contact/>
-  <footers/>
-  
+  <p>Testjh.dkhkjandkjashdkj</p>
 </template>
 
 <style scoped>

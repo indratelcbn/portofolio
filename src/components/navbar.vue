@@ -22,15 +22,18 @@
           <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#projects">Project</a>
+          <router-link to="/Projects" class="nav-link">Projects</router-link>
         </li>
-                <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
+          <li class="nav-item">
+            <router-link to="/ContactHome" class="nav-link">Contact</router-link>
+          </li>
+        <li class="nav-item">
+          <router-link to="/HomePage" class="nav-link">Login</router-link>
         </li>
         
       </ul>
     </div>
   </div>
 </nav>
-
+<router-view/>
 </template>
