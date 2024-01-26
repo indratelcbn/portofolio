@@ -21,7 +21,7 @@
 export default{
     data() {
         return{
-          namaDepan: "Badenk",
+        namaDepan: "Badenk",
         namaBelakang: "Darma",
         inputValueNamaDepan:"",
         inputValueNamaBelakang: ""
