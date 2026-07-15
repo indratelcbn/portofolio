@@ -8,16 +8,16 @@ const sectionRef = ref(null)
 useScrollReveal(sectionRef)
 
 const stats = [
-  { number: '3+', key: 'yearsExp', icon: 'bi-calendar-check' },
-  { number: '20+', key: 'projectsDone', icon: 'bi-folder-check' },
-  { number: '15+', key: 'happyClients', icon: 'bi-people-fill' },
+  { number: '2+', key: 'yearsExp', icon: 'bi-calendar-check' },
+  { number: '2', key: 'projectsDone', icon: 'bi-folder-check' },
+  
 ]
 
 const techStack = [
   { name: 'Vue.js', icon: 'bi-code-slash', color: '#41B883' },
-  { name: 'React', icon: 'bi-diagram-3', color: '#61DAFB' },
+  { name: 'Quasar', icon: 'bi-layout-wtf', color: '#1976D2' },
+  { name: 'JavaScript', icon: 'bi-filetype-js', color: '#F7DF1E' },
   { name: 'Node.js', icon: 'bi-server', color: '#68A063' },
-  { name: 'TypeScript', icon: 'bi-filetype-tsx', color: '#3178C6' },
   { name: 'Docker', icon: 'bi-box-seam', color: '#2496ED' },
   { name: 'PostgreSQL', icon: 'bi-database', color: '#336791' },
 ]
@@ -41,7 +41,7 @@ const techStack = [
             <div class="about-img-decoration" aria-hidden="true"></div>
             <!-- Experience badge -->
             <div class="exp-badge">
-              <div class="exp-badge-number">3+</div>
+              <div class="exp-badge-number">2</div>
               <div class="exp-badge-text">Years<br>Exp.</div>
             </div>
           </div>
@@ -50,7 +50,7 @@ const techStack = [
         <!-- Right: Content -->
         <div class="col-lg-7 reveal" style="transition-delay:0.15s">
           <h3 class="about-name mb-1">Indra Budi Darma</h3>
-          <p class="about-role mb-3">Frontend Developer · Jakarta, Indonesia</p>
+          <p class="about-role mb-3">Frontend Developer · Bogor, West Java, Indonesia</p>
           <p class="about-bio">{{ langStore.t.about.bio1 }}</p>
           <p class="about-bio">{{ langStore.t.about.bio2 }}</p>
 
@@ -88,13 +88,13 @@ const techStack = [
       <!-- GitHub Stats -->
       <div class="github-stats-row reveal mt-5">
         <img
-          src="https://github-readme-stats.vercel.app/api?username=indrabudidarma&show_icons=true&theme=transparent&hide_border=true&title_color=6366f1&icon_color=6366f1&text_color=64748b&bg_color=00000000"
+          src="https://github-readme-stats.vercel.app/api?username=indratelcbn&show_icons=true&theme=transparent&hide_border=true&title_color=6366f1&icon_color=6366f1&text_color=64748b&bg_color=00000000"
           alt="GitHub Stats"
           class="github-stat-img"
           loading="lazy"
         />
         <img
-          src="https://github-readme-streak-stats.herokuapp.com/?user=indrabudidarma&hide_border=true&stroke=00000000&background=00000000&ring=6366f1&fire=10b981&currStreakLabel=6366f1&dates=64748b&currStreakNum=0f172a&sideLabels=64748b&sideNums=0f172a"
+          src="https://github-readme-streak-stats.herokuapp.com/?user=indratelcbn&hide_border=true&stroke=00000000&background=00000000&ring=6366f1&fire=10b981&currStreakLabel=6366f1&dates=64748b&currStreakNum=0f172a&sideLabels=64748b&sideNums=0f172a"
           alt="GitHub Streak"
           class="github-stat-img"
           loading="lazy"
