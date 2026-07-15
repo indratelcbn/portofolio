@@ -22,7 +22,7 @@ async function handleSubmit() {
   status.value = 'sending'
   try {
     // Replace YOUR_FORM_ID with your Formspree form ID at https://formspree.io
-    const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    const res = await fetch('https://formspree.io/f/mykrzvqr', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({ name: form.name, email: form.email, message: form.message }),
