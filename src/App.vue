@@ -1,19 +1,12 @@
 <script setup>
-import navbar from './components/navbar.vue'
-import about from './components/about.vue'
-import jumbotron from './components/jumbotron.vue'
-import HomePage from './views/HomePage.vue';
+import TheNavbar from '@/components/TheNavbar.vue'
 </script>
 
-
 <template>
-  <navbar />
-  <home-page />
-  <about />
-  <jumbotron />
-
-  <p>Testjh.dkhkjandkjashdkj</p>
+  <TheNavbar />
+  <router-view />
 </template>
 
-<style scoped>
+<style>
+/* App-level styles only */
 </style>
