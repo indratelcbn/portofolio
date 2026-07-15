@@ -10,66 +10,29 @@ useScrollReveal(sectionRef)
 const experiences = [
   {
     title: 'Frontend Developer',
-    company: 'PT. Digital Nusantara',
-    location: { en: 'Jakarta, Indonesia', id: 'Jakarta, Indonesia' },
-    period: { en: '2022 – Present', id: '2022 – Sekarang' },
+    company: 'Badan Informasi Geospasial (BIG)',
+    department: 'Directorate of Geospatial Information Standards and Technology',
+    location: { en: 'Bogor, West Java, Indonesia', id: 'Bogor, Jawa Barat, Indonesia' },
+    period: { en: '2024 – Present', id: '2024 – Sekarang' },
     current: true,
     achievements: {
       en: [
-        'Built and maintained 5+ client web applications using Vue.js 3 and Node.js',
-        'Reduced average page load time by 40% through code splitting and lazy loading',
-        'Led a team of 3 junior developers, conducting code reviews and mentoring sessions',
-        'Implemented CI/CD pipelines with GitHub Actions, cutting deployment time by 60%',
-        'Architected RESTful APIs serving 50,000+ monthly active users with 99.9% uptime',
+        'Develop and maintain enterprise web applications supporting Indonesia\'s national geospatial information services.',
+        'Design and develop responsive Single Page Applications (SPA) using Vue.js and Quasar Framework.',
+        'Integrate frontend applications with RESTful APIs and enterprise backend services.',
+        'Collaborate with cross-functional teams, including backend engineers, GIS specialists, QA engineers, and infrastructure teams.',
+        'Participate in feature planning, implementation, deployment, and production support.',
+        'Support Docker, Linux, PostgreSQL, and Nginx production environments.',
+        'Develop applications integrated with ArcGIS Enterprise.',
       ],
       id: [
-        'Membangun dan memelihara 5+ aplikasi web klien menggunakan Vue.js 3 dan Node.js',
-        'Mengurangi waktu muat halaman rata-rata sebesar 40% melalui code splitting dan lazy loading',
-        'Memimpin tim 3 developer junior, melakukan code review dan sesi mentoring',
-        'Mengimplementasikan pipeline CI/CD dengan GitHub Actions, memotong waktu deployment 60%',
-        'Merancang RESTful API yang melayani 50.000+ pengguna aktif bulanan dengan uptime 99.9%',
-      ],
-    },
-  },
-  {
-    title: 'Junior Web Developer',
-    company: 'Startup XYZ',
-    location: { en: 'Jakarta, Indonesia', id: 'Jakarta, Indonesia' },
-    period: { en: '2020 – 2022', id: '2020 – 2022' },
-    current: false,
-    achievements: {
-      en: [
-        'Developed RESTful APIs with Node.js/Express serving 10,000+ daily active users',
-        'Built responsive UI components with Vue.js 2 and Bootstrap 4',
-        'Integrated third-party payment gateways (Midtrans, Stripe) reducing cart abandonment by 20%',
-        'Improved database query performance by 35% through proper indexing and query optimization',
-        'Participated in Agile/Scrum sprints and daily standups',
-      ],
-      id: [
-        'Mengembangkan RESTful API dengan Node.js/Express melayani 10.000+ pengguna aktif harian',
-        'Membangun komponen UI responsif dengan Vue.js 2 dan Bootstrap 4',
-        'Mengintegrasikan payment gateway pihak ketiga (Midtrans, Stripe) mengurangi cart abandonment 20%',
-        'Meningkatkan performa query database sebesar 35% melalui indexing dan optimasi query',
-        'Berpartisipasi dalam sprint Agile/Scrum dan daily standup',
-      ],
-    },
-  },
-  {
-    title: 'Freelance Web Developer',
-    company: 'Self-Employed',
-    location: { en: 'Remote', id: 'Remote' },
-    period: { en: '2019 – 2020', id: '2019 – 2020' },
-    current: false,
-    achievements: {
-      en: [
-        'Delivered 10+ web projects for local small businesses on time and budget',
-        'Built e-commerce sites, landing pages, and company profiles using PHP, MySQL, and JavaScript',
-        'Maintained 5-star client satisfaction rating across all completed projects',
-      ],
-      id: [
-        'Menyelesaikan 10+ proyek web untuk bisnis lokal tepat waktu dan sesuai anggaran',
-        'Membangun toko online, landing page, dan profil perusahaan menggunakan PHP, MySQL, JavaScript',
-        'Mempertahankan penilaian kepuasan klien bintang 5 di semua proyek yang diselesaikan',
+        'Mengembangkan dan memelihara aplikasi web enterprise yang mendukung layanan informasi geospasial nasional Indonesia.',
+        'Merancang dan mengembangkan Single Page Application (SPA) responsif menggunakan Vue.js dan Quasar Framework.',
+        'Mengintegrasikan aplikasi frontend dengan RESTful API dan layanan backend enterprise.',
+        'Berkolaborasi dengan tim lintas fungsi, termasuk backend engineer, spesialis GIS, QA engineer, dan tim infrastruktur.',
+        'Berpartisipasi dalam perencanaan fitur, implementasi, deployment, dan dukungan produksi.',
+        'Mendukung lingkungan produksi Docker, Linux, PostgreSQL, dan Nginx.',
+        'Mengembangkan aplikasi yang terintegrasi dengan ArcGIS Enterprise.',
       ],
     },
   },
@@ -108,7 +71,11 @@ const experiences = [
                     <h3 class="exp-title">{{ exp.title }}</h3>
                     <p class="exp-company">
                       <i class="bi bi-building me-1"></i>{{ exp.company }}
-                      <span class="mx-2">·</span>
+                    </p>
+                    <p class="exp-department" v-if="exp.department">
+                      {{ exp.department }}
+                    </p>
+                    <p class="exp-company">
                       <i class="bi bi-geo-alt me-1"></i>{{ exp.location[langStore.locale] }}
                     </p>
                   </div>
@@ -198,6 +165,7 @@ const experiences = [
 }
 .exp-title { font-size: 1.125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem; }
 .exp-company { font-size: 0.875rem; color: var(--text-muted); margin: 0; }
+.exp-department { font-size: 0.8rem; color: var(--text-muted); margin: 0.15rem 0 0; font-style: italic; }
 .exp-period {
   display: block;
   background: rgba(var(--primary-rgb), 0.08);
